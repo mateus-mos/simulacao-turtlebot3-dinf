@@ -132,6 +132,12 @@
         </ignition-gui>
       </plugin>
 
+      <plugin filename="Teleop" name="Teleop">
+        <ignition-gui>
+          <property type="string" key="state">docked</property>
+        </ignition-gui>
+        <topic>/model/turtlebot3_burger/cmd_vel</topic>
+      </plugin>
       <!-- Entity tree -->
       <plugin filename="EntityTree" name="Entity tree">
         <ignition-gui>
