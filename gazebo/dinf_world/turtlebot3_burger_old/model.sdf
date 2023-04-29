@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<sdf version="1.5">
+<sdf version="1.9">
   <model name="turtlebot3_burger">  
 
     <link name="base">
@@ -26,20 +26,14 @@
         </geometry>
       </collision>
 
-     <visual name="base_visual">
+      <visual name="base_visual">
         <pose>-0.032 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>meshes/burger_base.stl</uri>
-            <scale>.001 .001 .001</scale>
+            <uri>model://turtlebot3_burger/meshes/burger_base.dae</uri>
+            <scale>0.001 0.001 0.001</scale>
           </mesh>
         </geometry>
-         <material>
-            <ambient>0.9 0.1 0 1</ambient>
-            <diffuse>0.9 0.1 0 1</diffuse>
-            <specular>0.9 0.2 0.2 1</specular>
-            <emissive>0.9 0 0.1 1</emissive>
-          </material>
       </visual>
 
       <collision name="caster_collision">
@@ -91,19 +85,13 @@
         <pose>-0.032 0 0.171 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>meshes/lds.stl</uri>
+            <uri>model://turtlebot3_burger/meshes/lds.dae</uri>
             <scale>0.001 0.001 0.001</scale>
           </mesh>
         </geometry>
-        <material>
-            <ambient>0.5 0.75 0 1</ambient>
-            <diffuse>0.7 0.9 0 1</diffuse>
-            <specular>0.2 0.2 0.2 1</specular>
-            <emissive>0.1 0 0.1 1</emissive>
-          </material>
       </visual>
 
-      <sensor name="hls_lfcd_lds" type="gpu_ray">
+      <sensor name="hls_lfcd_lds" type="ray">
         <always_on>1</always_on>
         <visualize>0</visualize>
         <pose>-0.032 0 0.171 0 0 0</pose>
@@ -172,16 +160,10 @@
         <pose>0 0.08 0.023 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>meshes/left_tire.stl</uri>
+            <uri>model://turtlebot3_burger/meshes/tire.dae</uri>
             <scale>0.001 0.001 0.001</scale>
           </mesh>
         </geometry>
-        <material>
-            <ambient>0.1 0.1 0.1 1</ambient>
-            <diffuse>0.1 0.1 0.1 1</diffuse>
-            <specular>0.1 0.1 0.1 1</specular>
-            <emissive>0.1 0.1 0.1 1</emissive>
-          </material>
       </visual>
     </link>
 
@@ -226,16 +208,10 @@
         <pose>0.0 -0.08 0.023 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>meshes/right_tire.stl</uri>
+            <uri>model://turtlebot3_burger/meshes/tire.dae</uri>
             <scale>0.001 0.001 0.001</scale>
           </mesh>
         </geometry>
-          <material>
-            <ambient>0.1 0.1 0.1 1</ambient>
-            <diffuse>0.1 0.1 0.1 1</diffuse>
-            <specular>0.1 0.1 0.1 1</specular>
-            <emissive>0.1 0.1 0.1 1</emissive>
-          </material>
       </visual>
     </link>
 
@@ -244,7 +220,7 @@
       <child>left_wheel</child>
       <pose>0.0 0.08 0.023 -1.57 0 0</pose>
       <axis>
-        <xyz>0 0 1</xyz>
+        <xyz>0 1 0</xyz>
       </axis>
     </joint>
 
@@ -253,7 +229,7 @@
       <child>right_wheel</child>
       <pose>0.0 -0.08 0.023 -1.57 0 0</pose>
       <axis>
-        <xyz>0 0 1</xyz>
+        <xyz>0 1 0</xyz>
       </axis>
     </joint>
 
@@ -266,19 +242,16 @@
         <use_parent_model_frame>true</use_parent_model_frame>
       </axis>
     </joint>
-    
 
-   <!-- DIFF DRIVE PLUGIN / WHEELS CONTROLER -->
-    <plugin filename="ignition-gazebo-diff-drive-system" name="ignition::gazebo::systems::DiffDrive">
-      <left_joint>left_wheel_joint</left_joint>
-      <right_joint>right_wheel_joint</right_joint>
-      <wheel_separation>0.6851</wheel_separation>
-      <wheel_radius>0.1651</wheel_radius>
-      <odom_publish_frequency>20</odom_publish_frequency>
-      <frame_id>odom</frame_id>
-      <child_frame_id>base_link</child_frame_id>
+    <plugin
+        filename="gz-sim-diff-drive-system"
+        name="gz::sim::systems::DiffDrive">
+        <left_joint>left_wheel_joint</left_joint>
+        <right_joint>right_wheel_joint</right_joint>
+        <wheel_separation>1.25</wheel_separation>
+        <wheel_radius>0.3</wheel_radius>
+        <odom_publish_frequency>1</odom_publish_frequency>
+        <topic>turtlebot3_burger</topic>
     </plugin>
-    
-  <static>0</static>
   </model>
 </sdf>
