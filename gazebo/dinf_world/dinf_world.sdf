@@ -187,13 +187,13 @@
 
     <!-- Turtlebot3 burger -->
     <include>
-      <pose>0 0 1 0 0 0</pose>
+      <pose>-4 20 4 0 0 0</pose>
       <uri>mode://turtlebot3_burger</uri>
     </include>
 
     <include>
       <pose>0 0 0 0 0 1.57</pose>
-      <uri>https://fuel.ignitionrobotics.org/1.0/openrobotics/models/Playground</uri>
+      <uri>mode://2ndo_andar_passarela_escadas_v4</uri>
     </include>
 
   </world>
