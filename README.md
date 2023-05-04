@@ -14,6 +14,7 @@
 - [ ] Adicionar objetos na mundo?
 - [ ] Melhorar os parâmetros da física do turtlebot?
 - [ ] Descobrir o por que de a mudança do max_step_size no GUI do gazebo não estar funcionando
+- [ ] Adicionar o transform control plugin no GUI no sdf
 - [x] Trocar o lidar com ray para o gpu_lidar
 - [x] Adicionar a estrutura do Dinf no mundo
 - [x] Mudar as cores do Turtlebot (ambient diffuse specular emissive)
