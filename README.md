@@ -12,11 +12,13 @@
 - [ ] Criar launch file?
 - [ ] Lançar o Rviz junto com a simulação
 - [ ] Adicionar objetos na mundo?
-- [x] Arrumar lidar do Turtlebot
+- [ ] Melhorar os parâmetros da física do turtlebot?
+- [ ] Descobrir o por que de a mudança do max_step_size no GUI do gazebo não estar funcionando
+- [x] Trocar o lidar com ray para o gpu_lidar
 - [x] Adicionar a estrutura do Dinf no mundo
 - [x] Mudar as cores do Turtlebot (ambient diffuse specular emissive)
 - [x] Configurar diff driver plugin
-
+- [x] Ajustar posição de inicialização do turtlebot no mundo
 
 ## Como rodar a simulação
 
