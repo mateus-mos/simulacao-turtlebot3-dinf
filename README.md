@@ -1,5 +1,6 @@
 # Simulação do Turtlebot3 no ambiente do Dinf UFPR
 
+**O mapa do dinf utilizado aqui foi feito pela Leticia Fontanelli e pelo Vinicius Tikara**
 ## Requisitos 
 
 - ROS2 Humble
@@ -14,6 +15,8 @@
 - [x] Arrumar lidar do Turtlebot
 - [x] Adicionar a estrutura do Dinf no mundo
 - [x] Mudar as cores do Turtlebot (ambient diffuse specular emissive)
+- [x] Configurar diff driver plugin
+
 
 ## Como rodar a simulação
 
