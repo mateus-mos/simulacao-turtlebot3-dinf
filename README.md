@@ -25,8 +25,6 @@
 
 Adicione essas linhas no seu `.bashrc`. Adicione o caminho correto para o dinf_world no export e rode um `source ~/.bashrc`.
 
-`source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash`
-
 `source /opt/ros/humble/setup.bash`
 
 `export IGN_GAZEBO_RESOURCE_PATH="$HOME/caminho/para/o/arquivo/simulacao-Turtlebot3/gazebo/dinf_world"`
