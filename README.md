@@ -29,8 +29,6 @@ Adicione essas linhas no seu `.bashrc`. Adicione o caminho correto para o dinf_w
 
 `source /opt/ros/humble/setup.bash`
 
-`source ~/Documents/ROS2/turtlebot_ws/install/setup.bash`
-
 `export IGN_GAZEBO_RESOURCE_PATH="$HOME/caminho/para/o/arquivo/simulacao-Turtlebot3/gazebo/dinf_world"`
 
 Na pasta /dinf_world rode o comando `ign gazebo -v -r dinf_world.sdf`, você deverá ver a seguinte tela:
